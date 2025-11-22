@@ -97,7 +97,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03781569, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.0600001
 --- !u!50 &650664811321832528
@@ -135,3 +135,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosionUs: {fileID: 430021312543954311, guid: 09b2d133c4dea1040b2933d169ac1c8e,
     type: 3}
+  _mainSpawner: {fileID: 0}
+  _explosionAudio: {fileID: 0}

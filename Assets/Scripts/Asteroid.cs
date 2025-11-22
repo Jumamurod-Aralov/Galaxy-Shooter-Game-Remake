@@ -1,27 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
     [SerializeField] private GameObject _explosionUs;
-    private SpawnManager _mainSpawner;
-    private AudioSource _explosionAudio;
+    [SerializeField] private SpawnManager _mainSpawner;
+    [SerializeField] private AudioSource _explosionAudio;
 
     private void Start()
     {
-        _mainSpawner = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
-
         if (_mainSpawner == null)
-        {
             Debug.LogError("Spawn Manager is NULL");
-        }
 
-        _explosionAudio = GameObject.Find("DestroyExplosion").GetComponent<AudioSource>();
         if (_explosionAudio == null)
-        {
             Debug.LogError("Explosion Audio is NULL");
-        }
     }
 
     void Update()
@@ -38,7 +29,7 @@ public class Asteroid : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D enterOther)
     {
-        if (enterOther.CompareTag("Laser"))
+        if (enterOther.CompareTag("PlayerLaser"))
         {
             GameObject explosion = Instantiate(_explosionUs, transform.position, Quaternion.identity);
             Destroy(enterOther.gameObject);

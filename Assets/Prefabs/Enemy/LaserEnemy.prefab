@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3387988679726400490}
   - component: {fileID: -2458303226291178667}
   - component: {fileID: 1916799474425810497}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LaserEnemy
-  m_TagString: Enemy
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee815164bf6d79c4498e642e4f3b393d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 4
+  _rotateSpeed: 200
+  _detectRadius: 5
 --- !u!61 &-2458303226291178667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60,7 +63,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0025711209, y: -1.6877232}
+  m_Offset: {x: -0.0025711209, y: -1.4437904}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -71,7 +74,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47034368, y: 0.40349388}
+  m_Size: {x: 0.47034368, y: 0.8913592}
   m_EdgeRadius: 0
 --- !u!50 &1916799474425810497
 Rigidbody2D:
@@ -104,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4858921926422547840}
   - component: {fileID: 4858921926422547841}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LaserEnemRight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -185,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4858921926983231804}
   - component: {fileID: 4858921926983231805}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LaserEnemLeft
   m_TagString: Enemy
   m_Icon: {fileID: 0}
